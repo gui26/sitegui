@@ -13,12 +13,12 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '18.x'
-      - name: Build sitegui
+      - name: Build site-gui1
         run: |
           npm ci
           npm run build
-      - name: Deploy to sitegui
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to site-gui
+        uses: peaceiris/actions-site-guis@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
